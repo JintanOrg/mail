@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jintan.Org 邮箱</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #292929; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 14px; line-height: 1.5; }
+a { color: #a43838; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.page { width: 360px; max-width: calc(100% - 48px); margin: clamp(70px, 18vh, 180px) auto 60px; }
+.heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 16px; margin-bottom: 24px; border-bottom: 2px solid #973737; }
+h1 { margin: 0; font-size: 26px; line-height: 1.25; font-weight: 600; letter-spacing: normal; }
+.heading span { font-size: 14px; line-height: 1.5; color: #777; }
+label.field { display: block; margin: 0 0 8px; font-size: 14px; line-height: 1.5; }
+.input + label.field { margin-top: 20px; }
+.input { display: flex; align-items: center; height: 44px; overflow: hidden; border: 1px solid #cbd0d5; border-radius: 3px; }
+.input:focus-within { border-color: #b64a4a; box-shadow: 0 0 0 1px #b64a4a; }
+input[type=text], input[type=password] { width: 100%; min-width: 0; height: 100%; padding: 10px 12px; border: 0; outline: none; background: transparent; font: inherit; font-size: 15px; line-height: 22px; color: #222; }
+.suffix { flex-shrink: 0; padding-right: 12px; white-space: nowrap; font-size: 14px; line-height: 22px; color: #777; }
+.options { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 16px 0 24px; color: #666; font-size: 13px; line-height: 20px; }
+.options label { display: flex; gap: 6px; align-items: center; }
+input[type=checkbox] { margin: 0; width: 14px; height: 14px; accent-color: #a43c3c; }
+button { display: block; width: 100%; height: 44px; padding: 0 12px; border: 1px solid #8f3030; border-radius: 3px; background: #a43c3c; color: white; font: inherit; font-size: 15px; line-height: 22px; cursor: pointer; }
+button:hover { background: #8f3030; }
+button:focus-visible, a:focus-visible { outline: 2px solid #b64a4a; outline-offset: 4px; }
+.register { margin: 12px 0 0; text-align: right; font-size: 13px; line-height: 20px; }
+.footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #eee; font-size: 12px; line-height: 20px; }
+.footer a { color: #999; display: inline-flex; align-items: center; gap: 5px; }
+.footer img { width: 14px; height: 15px; object-fit: contain; }
+@media (max-width: 480px) { .page { margin-top: 75px; } }
+</style>
+</head>
+<body>
+<main class="page">
+<div class="heading"><h1>Jintan.Org</h1><span>邮箱登录</span></div>
+<form id="loginForm" action="https://entryhz.qiye.163.com/domain/domainEntLogin" method="post">
+<input name="domain" id="domain" type="hidden" value="jintan.org">
+<input name="support_verify_code" id="support_verify_code" type="hidden" value="1">
+<label class="field" for="account_name">用户名</label>
+<div class="input"><input name="account_name" id="account_name" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required aria-describedby="domain-suffix"><span class="suffix" id="domain-suffix">@jintan.org</span></div>
+<label class="field" for="password">密码</label>
+<div class="input"><input name="password" id="password" type="password" autocomplete="current-password" required></div>
+<div class="options"><label><input name="secure" id="secure" type="checkbox" checked value="1">SSL 安全登录</label><label><input name="all_secure" id="all_secure" type="checkbox" checked value="1">全程 SSL</label></div>
+<input name="remUser" id="remUsername" type="hidden" value="1">
+<button type="submit">登录</button>
+<p class="register"><a href="https://docs.qq.com/form/page/DYXFrU1ZLWGpZdEtk">注册邮箱</a></p>
+</form>
+<footer class="footer"><a target="_blank" rel="noopener noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32048202000364"><img src="https://xwj.panyixiao.com/tp/2022/01/17/beian.png" alt="">苏公网安备 32048202000364号</a></footer>
+</main>
+</body>
+</html>
+
+
